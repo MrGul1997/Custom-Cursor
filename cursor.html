@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cursor Style change with jQuery</title>
+</head>
+<body>
+    <div class="c0"></div>
+    <div class="c1 one"></div>
+    <div class="c1 two"></div>
+    <div class="c1 three"></div>
+    <script src="./jquery-3.4.1.min.js"></script>
+    <script>
+        $(window).mousemove(function(e){
+            var horip=e.pageX;
+            var vartip=e.pageY;
+            console.log(horip,vartip);
+            $('div').css({
+                top:vartip,
+                left:horip,
+                visibilty:'visible',
+                opacity:'1'
+            })
+            console.log(horip,vartip);
+        });
+    </script>
+</body>
+</html>
